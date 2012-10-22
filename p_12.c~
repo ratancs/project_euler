@@ -7,7 +7,7 @@ void main()
 {
 
 double sum=0.0,temp,i,j;
-
+int x;
 for(i=2;i<2000000;i++)
 {
     temp=(int)sqrt(i);
