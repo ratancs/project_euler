@@ -19,27 +19,32 @@ What is the value of the first triangle number to have over five hundred divisor
 
 */
 
-
 #include<stdio.h>
+
 void main()
 {
 
-double sum=0.0,temp,i,j;
-
+double sum=0.0,temp,i,j=1.0,num=0.0,k=1.0;
+i=1.0;
+num+=i++;
+num+=i++;
 int count;
-
+char c;
 while(1)
-{
-    temp=(int)sqrt(i);
+{   
+	count=0;
+ 	num+=i++;
+	temp=(int)sqrt(num);
 
   for(j=2;j<=temp;j++)
-      if(fmod(i,j)==0.0)
-           break;
-
-    if(j>temp)
-          sum=sum+i;
+      if(fmod(num,j)==0.0)
+           count+=2;
+     
+if(count>500)
+{printf("\nnum=%lf\t root=%lf\t divisors=%d",num,temp,count);
+break;}
 }   
 
-printf("\n%lf",sum);
+printf("\n%lf",num);
 }
 		
